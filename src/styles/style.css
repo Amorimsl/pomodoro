@@ -1,0 +1,83 @@
+.navbar {
+  background-color:transparent;
+  color: #000000;
+
+}
+#titles{  
+  color: black;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+input{
+  width: 150px !important;
+  height: 150px !important;
+  font-size: 50pt !important;
+  text-align: center !important;
+  border-radius: 20px !important;
+  background-color:#ffe1ba !important;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"]
+{
+  -moz-appearance: none;
+}
+.btn-color{
+  background-color:transparent;
+  color:black;
+  border-color: yellow;
+  cursor: pointer;
+}
+
+.time{
+  color:black;
+  text-align: center;
+  width: 20rem;
+  height: 20rem ;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto !important;
+}
+
+h2{
+  font-size: 90pt;
+}
+#timer {
+  display: none !important;
+}
+
+.img{
+  background-image: url('/src/img/testes.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+
+  
+}
+
+#sections,#pausa,#action{
+  background-color: transparent;
+}
+
+#title_section{
+  color:red;
+}
+.text-color{
+  color: red;
+}
+
+.container{
+  padding-top: 0.6rem !important;
+  
+} 
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>timer </title>
+</head>
+
+<body class="img">
+
+  <!-- Menu-->
+  <nav class="navbar navbar-expand-lg navbar-light ">
+
+
+    <a class="navbar-brand font-weight-bold" href="index.html" id="titles">Timer Pomodoro</a>
+    <div class="ml-auto">
+
+      <a><i id="pause" class="fa fa-pause text-black-600" style="font-size: 25pt;  display: none;"
+          aria-hidden="true"></i></a>
+      <a><i id="play" class="fa fa-play text-black-600" style="font-size: 25pt; display: none;"
+          aria-hidden="true"></i></a>
+
+      <audio id="lofi" src="/src/audio/lo-fi.mp3" type="audio/mpeg"></audio>
+    </div>
+
+  </nav>
+
+  <!-- Menu-->
+
+  <!-- Container -->
+
+  <div class="container  ">
+
+
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+
+      <div class="col-md-8">
+
+        <div id="config" class="row d-flex justify-content-center">
+
+          <div class="col">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-3 d-flex justify-content-center">
+                <div class="form-group">
+                  <label class=" d-flex justify-content-center text-black-600 font-weight-bold" for="action"
+                    class="form-label" id="text-size">Minutos</label>
+                  <input type="number" class="form-control form-control-lg  border-0 shadow  text-black-900 "
+                    id="action">
+                  <small class="text-danger" id="error_action"></small>
+                </div>
+              </div>
+              <div class="col-md-3 d-flex justify-content-center">
+                <div class="form-group">
+                  <label class=" d-flex justify-content-center text-black-900 font-weight-bold " for="pausa"
+                    class="form-label">Pausa</label>
+                  <input type="number" class="form-control  border-0 shadow  text-black-900 " id="pausa">
+                  <small class="text-danger" id="error_pausa"></small>
+                </div>
+              </div>
+              <div class="col-md-3 d-flex justify-content-center">
+                <div class="form-group">
+                  <label class=" d-flex justify-content-center text-black-600 font-weight-bold" for="sections"
+                    class="form-label">Sessões</label>
+                  <input type="number" class="form-control border-0 shadow  text-black-600 " id="sections">
+                  <small class="text-danger" id="error_sections"></small>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 mb-5 d-flex justify-content-center ">
+              <div class="col-md-9">
+                <button id="btn-inciar" class="btn-color btn-lg btn-block">Iniciar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="timer" class="mt-0 d-flex justify-content-center">
+      <div class="row mb-3">
+        <div class="col">
+          <h3 id="title" class="text-center"></h3>
+        </div>
+      </div>
+
+      <div class="row shadow time">
+        <div class="col-5 p-0">
+          <h2 id="minutes_ok"></h2>
+        </div>
+
+        <div class="col-1 p-0 d-flex justify-content-center">
+          <h2>:</h2>
+        </div>
+
+        <div class="col-5 pl-0">
+          <h2 id="seconds_ok"></h2>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+          <h3 id="title_section" class="text-center "></h3>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="fim" style="display: none;">
+      <h1 class="text-color text-center"> BOA, FEZ MAIS QUE SUA OBRIGAÇÃO </h1>
+      <div class="row mt-5 mb-5 d-flex justify-content-center">
+        <div class="col-md-9 d-flex justify-content-center">
+          <a href="index.html" class="btn btn-color shadow btn-lg"> Inicio</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- Container-->
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
