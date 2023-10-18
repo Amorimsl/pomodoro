@@ -80,4 +80,7 @@ h2{
   padding-top: 0.6rem !important;
   
 } 
-
+#btn-reset{
+  background-color: black;
+  color: white;
+}

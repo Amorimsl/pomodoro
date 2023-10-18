@@ -9,6 +9,7 @@ const titleSection = document.getElementById('title_section')
 const minutesOk = document.getElementById('minutes_ok')
 const secondsOk = document.getElementById('seconds_ok')
 const fim = document.getElementById('fim');
+const btnBack = document.getElementById('btn-back')
 
 
 const lofi = document.getElementById('lofi')
@@ -20,6 +21,7 @@ let segundos;
 var bell = new Audio("/audio/bell.mp3")
 var volta = new Audio("/audio/volta.mp3")
 var final = new Audio("/audio/final.mp3")
+
 
 
 const pausar = () => {
@@ -61,6 +63,8 @@ const iniciar = () => {
 
   }
 }
+var min_interval;
+var seg_interval;
 const momentAction = () => {
 
   let sections_Valor = localStorage.getItem('sections')
@@ -83,8 +87,8 @@ const momentAction = () => {
   minutesOk.innerHTML = min
   secondsOk.innerHTML = segundos
 
-  var min_interval = setInterval(minTimer, 60000)
-  var seg_interval = setInterval(segTimer, 1000)
+  min_interval = setInterval(minTimer, 60000)
+  seg_interval = setInterval(segTimer, 1000)
 
   function minTimer() {
     min = min - 1
@@ -121,8 +125,8 @@ const momentoPausa = () => {
   minutesOk.innerHTML = min_pausa
   secondsOk.innerHTML = segundos
 
-  var min_interval = setInterval(minTimer, 60000)
-  var seg_interval = setInterval(segTimer, 1000)
+  min_interval = setInterval(minTimer, 60000)
+  seg_interval = setInterval(segTimer, 1000)
   function minTimer() {
     min_pausa = min_pausa - 1
     minutesOk.innerHTML = min_pausa
@@ -159,8 +163,17 @@ const momentoPausa = () => {
     }
 
   }
+
 }
+
+
+
+const btnPlays = document.getElementById('btn-plays');
 
 btnInitial.addEventListener('click', iniciar);
 pause.addEventListener('click', pausar);
 play.addEventListener('click', played);
+
+
+
+
