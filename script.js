@@ -17,9 +17,9 @@ const play = document.getElementById('play')
 
 let segundos;
 
-var bell = new Audio("/src/audio/bell.mp3")
-var volta = new Audio("/src/audio/volta.mp3")
-var final = new Audio("/src/audio/final.mp3")
+var bell = new Audio("/audio/bell.mp3")
+var volta = new Audio("/audio/volta.mp3")
+var final = new Audio("/audio/final.mp3")
 
 
 const pausar = () => {

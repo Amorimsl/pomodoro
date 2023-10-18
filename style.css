@@ -58,7 +58,7 @@ h2{
 }
 
 .img{
-  background-image: url('/src/img/testes.png');
+  background-image: url('/img/testes.png');
   background-repeat:no-repeat;
   background-size: cover;
 
