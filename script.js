@@ -67,6 +67,7 @@ const iniciar = () => {
 const momentAction = () => {
 
   let sections_Valor = localStorage.getItem('sections')
+
   if (sections_Valor != '1') {
     titleSection.innerHTML = sections_Valor + ' sessões restantes'
   } else {
@@ -116,7 +117,7 @@ const momentoPausa = () => {
   title.style.fontWeight = 'bold'
   title.style.setProperty('color', '#000000', 'important')
 
-  min_pausa = Number(localStorage.getItem('action'))
+  min_pausa = Number(localStorage.getItem('pausa'))
 
   min_pausa = min_pausa - 1
   segundos = 59
@@ -167,7 +168,6 @@ const momentoPausa = () => {
 
 
 
-const btnPlays = document.getElementById('btn-plays');
 
 btnInitial.addEventListener('click', iniciar);
 pause.addEventListener('click', pausar);
