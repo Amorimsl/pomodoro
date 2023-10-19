@@ -63,8 +63,7 @@ const iniciar = () => {
 
   }
 }
-var min_interval;
-var seg_interval;
+
 const momentAction = () => {
 
   let sections_Valor = localStorage.getItem('sections')
@@ -87,8 +86,8 @@ const momentAction = () => {
   minutesOk.innerHTML = min
   secondsOk.innerHTML = segundos
 
-  min_interval = setInterval(minTimer, 60000)
-  seg_interval = setInterval(segTimer, 1000)
+  var min_interval = setInterval(minTimer, 60000)
+  var seg_interval = setInterval(segTimer, 1000)
 
   function minTimer() {
     min = min - 1
@@ -125,8 +124,8 @@ const momentoPausa = () => {
   minutesOk.innerHTML = min_pausa
   secondsOk.innerHTML = segundos
 
-  min_interval = setInterval(minTimer, 60000)
-  seg_interval = setInterval(segTimer, 1000)
+  var min_interval = setInterval(minTimer, 60000)
+  var seg_interval = setInterval(segTimer, 1000)
   function minTimer() {
     min_pausa = min_pausa - 1
     minutesOk.innerHTML = min_pausa
